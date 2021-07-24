@@ -1,0 +1,12 @@
+<% if @posts.errors.any? %>
+    <div id="error_explanation">
+        <h2>No se puede guardar el post, por las siguientes razones:</h2>
+        <ul>
+            <% @posts.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% else %>
+    <h1>¡Se ha registrado con éxito el post: <%= @posts.title %>!</h1>
+<% end  %>
