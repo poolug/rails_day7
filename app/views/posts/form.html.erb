@@ -1,7 +1,7 @@
 <h1>Formulario para crear post</h1>
 <hr style="padding-bottom: 0.2em; background-color: grey;">
 <form action="/posts/create" method="POST">
-    <input type="hidden" name="authenticity_token" value="<=% form_authenticity_token %>">
+    <%= token_tag %>
 
     <div class="form-group">
         <label for="Título">Título</label>
